@@ -18,7 +18,7 @@ public class School {
        School sch1 = new School("sch1", 20);
        School sch2 = new School("sch2", 20);
 
-       Comparator<School> retval = (School a, School b) -> a.getNumOfStudents() - b.getNumOfStudents();
+       Comparator<School> retval = Comparator.comparingInt(School::getNumOfStudents);
 
         switch(retval.compare(sch1, sch2)) {
             case -1: {
